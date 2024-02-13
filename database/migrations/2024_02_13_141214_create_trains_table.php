@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
 
             $table->string('azienda', 60);
-            $table->string('stazione_di_partenza');
-            $table->string('stazione_di_arrivo');
-            $table->string('orario_partenza');
-            $table->string('orario_arrivo');
-            $table->string('codice_treno');
-            $table->string('numero_carrozze');
+            $table->string('stazione_di_partenza', 60);
+            $table->string('stazione_di_arrivo', 60);
+            $table->dateTime('orario_partenza', $precision = 0);
+            $table->dateTime('orario_arrivo', $precision = 0);
+            $table->bigInteger('codice_treno');
+            $table->bigInteger('numero_carrozze');
 
             $table->timestamps();
         });
