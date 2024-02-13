@@ -4,11 +4,14 @@
 @endsection
 @section('content')
    <h1>Treni: {{count($trains) }}</h1>
-   <ul>
+   <div>
     @foreach ($trains as $train)
-    <li>
-        {{ $train -> azienda}}
-    </li>
+    <div>
+        <h5>Nome Azienda: {{ $train -> azienda}}</h5>
+        <p>Orario di partenza: {{ $train -> orario_partenza}}</p>
+        <p>Orario di arrivo: {{ $train -> orario_arrivo}}</p>
+    </div>
     @endforeach
-   </ul>
+    </div>
+
 @endsection
