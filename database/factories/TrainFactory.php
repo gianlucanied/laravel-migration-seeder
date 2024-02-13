@@ -24,6 +24,8 @@ class TrainFactory extends Factory
             'orario_arrivo' => fake() -> randomFloat(2, 0, 24),
             'codice_treno' => fake() -> randomFloat(0, 100, 1000),
             'numero_carrozze'=> fake() -> randomFloat(0, 4, 10),
+            'in_orario'=> fake() -> boolean(),
+            'cancellato'=> fake() -> boolean()
         ];
     }
 }
